@@ -1,0 +1,24 @@
+## UNIVERSIDAD REGIONAL AMZÓNICA IKIAM
+## NOMBRE: Inti Llumiquinga
+
+## EXAMEN FINAL
+
+# Alineamiento de dos secuencias usando Biophyton
+
+!pip install biopython
+
+from Bio import pairwise2
+import numpy as np
+from Bio import pairwise2
+from Bio.pairwise2 import format_alignment
+
+# Definimos las secuencias
+seq1 = 'GGATCCTCTAGAGTCCCCCGTGTTCTCTCCAAATGAAATGAACTTCCTTATATAGAGGAAGGGTCTTGCG'
+seq2 = 'GGATCCTCTAGAGTCCCCCGTGTTCTCTCCAAATGAAATGAACTTCCTTATATAGAGGAAGGGTCTTGCG'
+
+# Realizamos el alineamiento
+alignments = pairwise2.align.globalxx(seq1, seq2)
+
+# Imprimimos los alineamientos
+for alignment in alignments:
+    print(format_alignment(*alignment))
