@@ -1,0 +1,16 @@
+## código para curvas de crecimiento bacteriano
+## Inti Llumiquinga
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+tiempo = np.linspace(1, 20, 20)
+crecimiento = np.array([2.0, 2.5, 3.0, 3.8, 3.5, 4.2, 4.8, 5.1, 6.0, 6.3, 7.0, 7.5, 8.2, 8.0, 8.7,
+                        9.5, 10.0, 9.8, 10.5, 11.0])
+
+# Gráfica de crecimiento
+plt.plot(tiempo, crecimiento)
+plt.xlabel('Tiempo (Días)')
+plt.ylabel('Crecimiento (mm)')
+plt.title('Curva de Crecimiento')
+plt.show()
